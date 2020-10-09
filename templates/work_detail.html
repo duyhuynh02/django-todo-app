@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-	<h2>{{ post.title }}</h2>
-	<p>{{ post.memo }}</p>
-	<a href="{% url 'work_edit' post.pk %}">Edit Work</a>
-	<a href="{% url 'work_delete' post.pk %}">Delete Work</a>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.memo }}</p>
+    <a href="{% url 'work_edit' post.pk %}">Edit Work</a>
+    <a href="{% url 'work_delete' post.pk %}">Delete Work</a>
 {% endblock %}
 

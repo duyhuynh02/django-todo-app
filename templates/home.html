@@ -5,14 +5,14 @@
 <ul>
   {% for post in object_list %}
     <li>
-  	  <table class="table table-bordered">
+      <table class="table table-bordered">
         <a href="{% url 'work_detail' post.pk %}">
-  	       {% if post.completed %}<strike>{% endif %}{{ post.title }} |{% if post.completed %}</strike>{% endif %}
- 	    </a>
-  	       {% if post.completed %}<strike>{% endif %}{{ post.memo }}  |{% if post.completed %}</strike>{% endif %}
-  	       {% if post.completed %}<strike>{% endif %}{{ post.date }}{% if post.completed %}</strike>{% endif %}
-	  </table>
-	</li>
+           {% if post.completed %}<strike>{% endif %}{{ post.title }} |{% if post.completed %}</strike>{% endif %}
+      </a>
+           {% if post.completed %}<strike>{% endif %}{{ post.memo }}  |{% if post.completed %}</strike>{% endif %}
+           {% if post.completed %}<strike>{% endif %}{{ post.date }}{% if post.completed %}</strike>{% endif %}
+    </table>
+  </li>
   {% endfor %}
  <ul>
 {% endblock %}
