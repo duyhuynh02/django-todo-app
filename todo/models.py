@@ -12,10 +12,8 @@ class Post(models.Model):
     completed = models.BooleanField()
     date = models.DateTimeField(auto_now=True)
 
-
     def __str__(self):
         return self.title[:50]
-
 
     def get_absolute_url(self):
         return reverse('work_detail', args=[str(self.pk)])
